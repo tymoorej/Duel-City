@@ -1,0 +1,78 @@
+Names: Dorsa Nahid and Tymoore Jamal
+
+ID:1463449 (Dorsa) and 1452978 (Tymoore)
+
+Section: EA1
+
+Accessories:
+
+2 Arduino Mega Boards (AMG)
+USB cables
+Wires
+LCD Monitors
+Joysticks
+
+
+Wiring:
+
+LCD monitor on both Arduinos 
+LCD monitor is attached from E10 to E19
+E10 <--> GND
+E11 <--> +5V
+E12 <--> port 8
+E13 <--> port 7
+E14 <--> port 5
+E15 <--> port 6
+E16 <--> port 51
+E17 <--> port 52
+E18 <--> port 50
+E19 <--> +5V
+
+
+Joystick on both Arduinos:
+Joystick is attached from F57 to F61
+F57 <--> GND
+F58 <--> port 9
+F59 <--> port A1
+F60 <--> port A0
+F61 <--> +5V
+
+
+On one Arduino:
+Pin 13 <--> +5V (through a resistor)
+
+On the other:
+Pin 13 <--> Ground.
+
+
+Between the two Arduinos:
+GND <--> GND 
+TR3 <--> RX3
+RX3 <--> TR3
+
+To run the code:
+Change the directory of your computer into the file Duel_city and then
+type the keyword: "make" into the command line to compile the code and
+then type the keywords: "make upload" into the command line to send the
+code to the Arduino to run. Do this on both computers with one Arduino 
+plugged into each one.
+
+While running our code:
+The user can move the joystick up and down on the selection menu. To 
+select an option you have to press down on the joystick. The code will
+continue to run into one of the characters is killed by the other.
+
+Assumptions made:
+That the user will select an option each time that the selection menu pops up.
+
+Helpful Information:
+In order to make the main file Duel_city less crowded, we added more files
+these include: globals.h which includes all our global variables, attacking.h
+and .cpp which declares and defines all functions involving attacking and the
+battle, lcd.h and .cpp which declares and defines all functions involving 
+printing and drawing to the LCD screen, and handshake.h and .cpp  which declares
+and defines all functions involving the communication between the two Arduinos. 
+For further information on each file please refer to the comments at the top of
+each file and before each function.
+
+
